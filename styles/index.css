@@ -50,7 +50,7 @@ nav a:active{
 
 .hamburguer{
     position: absolute;
-    top: 2rem;
+    top: 1.3rem;
     right: 2rem;
     font-size: 2rem;
     color: white;
@@ -98,8 +98,12 @@ section h2{
     display: flex;
     justify-content: space-around;
     padding: .9rem;
-    border-bottom: 1px solid var(--primary-color);
+    /* border-bottom: 1px solid var(--primary-color); */
     width: 100%;
+}
+
+#navcert::after{
+    background: -o-linear-gradient();
 }
 
 #navcert p{
@@ -130,6 +134,11 @@ section h2{
     border-radius: .5rem;
 }
 
+#courses h3:hover{
+    background: var(--primary-color);
+    color:var(--highlight-color) ;
+}
+
 footer{
     display: flex;
     flex-direction: column;
@@ -147,6 +156,10 @@ footer{
 
 header img, section img{
     margin: 0 1.5rem 0 0;
+}
+
+figcaption{
+    text-align: center;
 }
 
 @media screen and (min-width:700px) {
@@ -211,5 +224,4 @@ header img, section img{
     #c4, #c5, #c6{
         grid-row: 2;
     }
-
 }
