@@ -98,13 +98,10 @@ section h2{
     display: flex;
     justify-content: space-around;
     padding: .9rem;
-    /* border-bottom: 1px solid var(--primary-color); */
+    border-bottom: 1px solid var(--primary-color);
     width: 100%;
 }
 
-#navcert::after{
-    background: -o-linear-gradient();
-}
 
 #navcert p{
     text-align: center;
