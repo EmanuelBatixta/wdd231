@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --primary-color:#002121;
+    --secondary-color:#a9e5e0;
+    --highlight-color:#f96f2f;
+    --random-color:#EFEB16;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background:var(--primary-color);
+    color: var(--secondary-color);
+}
+
+#intro{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+nav a, nav ul{
+    text-decoration: none;
+    list-style: none;
+    color: var(--secondary-color);
+    padding: 1rem 0 0 0;
+    display: none;
+}
+
+nav a:hover{
+    color: var(--highlight-color);
+}
+
+nav a:active{
+    color:var(--random-color);
+}
+
+.hamburguer{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+    color: white;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.hamburguer::before{
+    content: "☰";
+}
+
+.hamburguer.open::before{
+    content: "✕";
+    color: var(--random-color);
+}
+
+.open a, .open ul{
+    display: block;
+}
+
+section{
+    border-radius: 1rem;
+    width: 90%;
+    margin: 1.5rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 1rem 0;
+    text-align: left;
+}
+
+section h2{
+    background: var(--primary-color);
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    color: var(--secondary-color);
+    padding: 1rem;
+}
+.country img{
+    margin: 1rem 0 0 0;
+}
+
+#navcert{
+    display: flex;
+    justify-content: space-around;
+    padding: .9rem;
+    border-bottom: 1px solid var(--primary-color);
+    width: 100%;
+}
+
+#navcert p{
+    text-align: center;
+    color: white;
+    background: var(--primary-color);
+    border-radius: .5rem;
+    padding: .1rem 2.1rem;
+}
+
+#navcert p:hover{
+    background: var(--highlight-color);
+    color: var(--primary-color);
+}
+
+#courses{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 0 0;
+    text-align: center;
+}
+
+#courses h3{
+    font-weight: normal;
+    padding: .5rem 7rem;
+    background: var(--highlight-color);
+    margin: .5rem;
+    border-radius: .5rem;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--primary-color);
+    padding: 1rem;
+    color: var(--secondary-color);
+}
+
+#lastModified{
+    padding: .3rem 0 0 0;
+    color: var(--random-color);
+}
+
+
+header img, section img{
+    margin: 0 1.5rem 0 0;
+}
+
+@media screen and (min-width:700px) {
+    .hamburguer{
+        display: none;
+    }
+
+    nav a, nav ul{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    section{
+        box-shadow: 0px 0px 10px black;
+    }
+
+    .course{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .country{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .certificates{
+        grid-column: 1/3;
+        grid-row: 2;
+    }
+
+    #navcert{
+        justify-content: center;
+    }
+    #navcert p{
+        padding: .5rem 2rem;
+        margin: 0 1rem;
+    }
+    
+    #courses{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        align-content: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    #courses h3{
+        padding: .5rem 1rem;
+        width: 90%;
+    }
+
+    #c1, #c2, #c3{
+        grid-row: 1;
+    }
+    #c4, #c5, #c6{
+        grid-row: 2;
+    }
+
+}
