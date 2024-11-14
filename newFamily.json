@@ -1,0 +1,24 @@
+{
+    "Family Name": "Oliveira",
+    "Moved Date": "2024-10-25",
+    "Members Number": 3,
+    "Visited": true,
+    "Individual":[
+        {
+        "Name": "Josh",
+        "Gender": "Male",
+        "Birthdate": "1990-01-01"
+    },
+    {
+        "Name":"Alycia",
+        "Gender":"Female",
+        "Birthdate": "1992-08-27"
+    },
+    {
+        "Name":"Jhon",
+        "Gender": "Male",
+        "Birthdate":"2008-02-28"
+    }
+]
+
+}
