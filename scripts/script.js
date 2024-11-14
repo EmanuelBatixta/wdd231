@@ -98,14 +98,11 @@ function creditsAmount(course){
     document.querySelector("#credits").innerHTML=``;
     var credits = 0
     course.forEach(course => {
-        if (course.completed) {
-            credits += course.credits;
-        };
+        credits += course.credits;
     });
     document.querySelector("#credits").innerHTML=`<span id="credits">Credits: ${credits}</span>`;
 }
-
-creditsAmount(courses);
+creditsAmount(courses)
 
 function coursesTab(courses){
     document.querySelector("#courses").innerHTML =``;
@@ -130,6 +127,7 @@ const wddCourse = document.querySelector("#wdd");
 const cseCourse = document.querySelector("#cse");
 
 allCourse.addEventListener("click", () => {
+    creditsAmount(courses)
     coursesTab(courses)
     allCourse.classList.add("active");
     wddCourse.classList.remove("active");
@@ -138,6 +136,7 @@ allCourse.addEventListener("click", () => {
 
 wddCourse.addEventListener("click", () => {
     const filteredCourses = courses.filter(course => course.subject == "WDD")
+    creditsAmount(filteredCourses)
     coursesTab(filteredCourses)
     allCourse.classList.remove("active");
     wddCourse.classList.add("active");
@@ -146,6 +145,7 @@ wddCourse.addEventListener("click", () => {
 
 cseCourse.addEventListener("click", () => {
     const filteredCourses = courses.filter(course => course.subject == "CSE")
+    creditsAmount(filteredCourses)
     coursesTab(filteredCourses)
     allCourse.classList.remove("active");
     wddCourse.classList.remove("active");

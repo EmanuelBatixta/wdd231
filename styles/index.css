@@ -118,6 +118,7 @@
         background: var(--primary-color);
         border-radius: .5rem;
         padding: .5rem 3rem;
+        max-width: 33.33%;
     }
 
     #navcert p:hover{
@@ -139,6 +140,7 @@
         flex-direction: column;
         padding: 1rem 0 0 0;
         text-align: center;
+        width: 100%;
     }
 
     .complete{
