@@ -6,6 +6,7 @@ async function getProphetData() {
     const data = await response.json();
     // console.table(data.prophets)
     displayProphets(data.prophets);
+    console.log(data.prophets)
 } 
 
 getProphetData();
@@ -34,5 +35,5 @@ const displayProphets = (prophets) => {
         card.appendChild(portrait)
         cards.appendChild(card)
     });
-  }
+}
   
