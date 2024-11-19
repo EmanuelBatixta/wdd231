@@ -1,9 +1,81 @@
-{
-    "name":"",
-    "address":"",
-    "phone number":"",
-    "website url":"",
+[{
+    "name":"Marmitaria do Bahia",
+    "address":"Honorato G, 222 Street",
+    "phone number":"+55 (12) 11111-1111",
+    "website url":"marmitariadobahia.com.br",
     "image FileName":"",
-    "membershipLevel":"",
-    "membershipTime":""
-}
+    "membershipLevel":3,
+    "membershipTime":"5 months"
+},
+{
+    "name":"Itoitec Piscinas",
+    "address":"Jose Candido, 333 Avenue",
+    "phone number":"+55 (12) 22222-2222",
+    "website url":"itoitecpicinas.com.br",
+    "image FileName":"",
+    "membershipLevel":2,
+    "membershipTime":"1 month"
+},
+{
+    "name":"Nagumo",
+    "address":"Carlos Andrade, 1752 Street",
+    "phone number":"+55 (12) 33333-3333",
+    "website url":"marmitariadobahia.com.br",
+    "image FileName":"",
+    "membershipLevel":1,
+    "membershipTime":"8 months"
+},
+{
+    "name":"Marmitaria do Bahia",
+    "address":"Honorato G, 222 Street",
+    "phone number":"+55 (12) 11111-1111",
+    "website url":"marmitariadobahia.com.br",
+    "image FileName":"",
+    "membershipLevel":2,
+    "membershipTime":"5 months"
+},
+{
+    "name":"Marmitaria do Bahia",
+    "address":"Honorato G, 222 Street",
+    "phone number":"+55 (12) 11111-1111",
+    "website url":"marmitariadobahia.com.br",
+    "image FileName":"",
+    "membershipLevel":2,
+    "membershipTime":"5 months"
+},
+{
+    "name":"Marmitaria do Bahia",
+    "address":"Honorato G, 222 Street",
+    "phone number":"+55 (12) 11111-1111",
+    "website url":"marmitariadobahia.com.br",
+    "image FileName":"",
+    "membershipLevel":2,
+    "membershipTime":"5 months"
+},
+{
+    "name":"Marmitaria do Bahia",
+    "address":"Honorato G, 222 Street",
+    "phone number":"+55 (12) 11111-1111",
+    "website url":"marmitariadobahia.com.br",
+    "image FileName":"",
+    "membershipLevel":2,
+    "membershipTime":"5 months"
+},
+{
+    "name":"Marmitaria do Bahia",
+    "address":"Honorato G, 222 Street",
+    "phone number":"+55 (12) 11111-1111",
+    "website url":"marmitariadobahia.com.br",
+    "image FileName":"",
+    "membershipLevel":2,
+    "membershipTime":"5 months"
+},
+{
+    "name":"Marmitaria do Bahia",
+    "address":"Honorato G, 222 Street",
+    "phone number":"+55 (12) 11111-1111",
+    "website url":"marmitariadobahia.com.br",
+    "image FileName":"",
+    "membershipLevel":2,
+    "membershipTime":"5 months"
+}]

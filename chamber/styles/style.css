@@ -58,6 +58,11 @@ nav a:hover{
     transition: background .9ms;
 }
 
+header img{
+    background-color: var(--fourthColor);
+    border-radius: 20rem;
+}
+
 /* hamburguer button ###############################################*/
 .hamburguer{
     position: absolute;
