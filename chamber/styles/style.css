@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    --textColor: #1e012a;
+    --secondaryColor: #642080;
+    --tirdColor: #D67DFA;
+    --fourthColor: #fff;
+    --alternativeColor:#789532;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Inter",sans-serif;
+    color: var(--textColor);
+}
+
+/* header conifguration ###################################################*/
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0 0 0;
+    background: var(--textColor);
+    color: var(--tirdColor);
+}
+
+header div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem 1rem 1rem;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--tirdColor);
+    padding: 1rem;
+    width: 100vw;
+    display: none;
+}
+
+nav a:hover{
+    background: var(--secondaryColor);
+    font-weight: bold;
+    transition: background .9ms;
+}
+
+/* hamburguer button ###############################################*/
+.hamburguer{
+    position: absolute;
+    top: 1.3rem;
+    right: 2rem;
+    font-size: 2rem;
+    color: white;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.hamburguer::before{
+    content: "☰";
+    transition: color 1s; 
+}
+
+.hamburguer.open::before{
+    content: "✕";
+    color: var(--tirdColor);
+}
+
+.open a{
+    display: block;
+}
+
+/* main configuration ############################################# */
+#pagetitle{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 1rem 0 0 1rem;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1rem 0 1rem;
+}
+
+section h2{
+    text-align: center;
+    width: 100%;
+    background-color: var(--textColor);
+    color: var(--tirdColor);
+    border-radius: 1rem 1rem 0rem 0rem ;
+    padding: .2rem;
+    margin: 0 0 1rem 0;
+}
+
+
+
+/* footer configuration ########################################## */
+footer{
+    display: flex;
+    flex-direction: column;
+    background: var(--textColor);
+    color: var(--tirdColor);
+    padding: 1rem;
+    gap: 1rem;
+    font-weight: 300;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--tirdColor);
+}
+
+footer a:hover{
+    opacity: 85%;
+    transition: opacity .5s;
+}
+
+h3{
+    color: var(--fourthColor);
+}
+
+.medias img{
+    width:60px;
+    color: var(--fourthColor);
+}
