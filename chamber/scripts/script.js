@@ -17,3 +17,4 @@ modified.innerHTML=`<span id="lastModified"> ${document.lastModified}</span>`
 
 const business = document.querySelector(".business")
 
+
