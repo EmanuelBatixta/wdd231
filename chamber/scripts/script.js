@@ -45,7 +45,7 @@ function createEnterpriseCard(data){
     // setting content
     nameTitle.innerHTML = `${ent.name}`;
     tag.innerHTML = `${ent.tag}`
-    mail.innerHTML = `<span>Email: </span>${ent.mail} `
+    mail.innerHTML = `<span>Email: </span>${ent.email} `
     phone.innerHTML = `<span>Phone: </span>${ent.phone} `
     url.innerHTML = `<span>URL: </span>${ent.url} `
     // setting attributes
