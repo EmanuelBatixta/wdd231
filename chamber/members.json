@@ -2,16 +2,19 @@
     "name":"MarketWave Trading",
     "address":"Honorato G, 222 Street",
     "phone":"+55 (12) 11111-1111",
-    "url":"marketwavetrading.com",
+    "url": "marketwave.com",
+    "email": "contact@marketwave.com",
     "image":"",
     "membershipLevel":3,
     "membershipTime":"5 months"
+    
 },
 {
     "name":"UrbanTrade Solutions",
     "address":"Jose Candido, 333 Avenue",
     "phone":"+55 (12) 22222-2222",
-    "url":"urbantradesolutions.com",
+    "url": "urbantrade.com", 
+    "email": "info@urbantrade.com",
     "image":"",
     "membershipLevel":2,
     "membershipTime":"1 month"
@@ -20,7 +23,8 @@
     "name":"PrimeGoods Hub",
     "address":"Carlos Andrade, 1752 Street",
     "phone":"+55 (12) 33333-3333",
-    "url":"primegoodshub.com",
+    "url": "primehub.com", 
+    "email": "support@primehub.com",
     "image":"",
     "membershipLevel":1,
     "membershipTime":"8 months"
@@ -29,7 +33,8 @@
     "name":"Mercantile Ventures",
     "address":"Batatais, 159 Sreet",
     "phone":"+55 (12) 44444-444",
-    "url":"mercantileventures.com",
+    "url": "mercantile.com", 
+    "email": "hello@mercantile.com",
     "image":"",
     "membershipLevel":2,
     "membershipTime":"9 months"
@@ -38,7 +43,8 @@
     "name":"VistaMart Enterprises",
     "address":"Cuiaba, 166 Avenue",
     "phone":"+55 (12) 55555-5555",
-    "url":"vistamartenterprises.com",
+    "url": "vistamart.com",
+    "email": "contact@vistamart.com",
     "image":"",
     "membershipLevel":3,
     "membershipTime":"12 months"
@@ -47,7 +53,8 @@
     "name":"TradeStreet Emporium",
     "address":"Honorato G, 222 Street",
     "phone":"+55 (12) 11111-1111",
-    "url":"tradestreetemporium.com",
+    "url": "tradestreet.com", 
+    "email": "info@tradestreet.com",
     "image":"",
     "membershipLevel":1,
     "membershipTime":"1 month"
@@ -56,7 +63,8 @@
     "name":"EcoCommerce Hub",
     "address":"Honorato G, 222 Street",
     "phone":"+55 (12) 11111-1111",
-    "url":"ecocommercehub.com",
+    "url": "ecohub.com", 
+    "email": "support@ecohub.com",
     "image":"",
     "membershipLevel":1,
     "membershipTime":"1 month"
@@ -65,7 +73,8 @@
     "name":"BrightTrade Marketplace",
     "address":"Honorato G, 222 Street",
     "phone":"+55 (12) 11111-1111",
-    "url":"brighttrademarketplace.com",
+    "url": "brighttrade.com", 
+    "email": "contact@brighttrade.com",
     "image":"",
     "membershipLevel":2,
     "membershipTime":"7 months"

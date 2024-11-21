@@ -31,6 +31,10 @@ export const aCourse = {
         renderSections(this.sections);
       }
     },
+    init: function() {
+      setCourseInfo(this);
+      renderSections(this.sections);
+    },
 };
 
 function setCourseInfo(course) {
