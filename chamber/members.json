@@ -1,18 +1,17 @@
 [{
     "name":"MarketWave Trading",
     "address":"Honorato G, 222 Street",
-    "phone":"+55 (12) 11111-1111",
+    "phone":"+551211111-1111",
     "url": "marketwave.com",
     "email": "contact@marketwave.com",
     "image":"",
     "membershipLevel":3,
     "membershipTime":"5 months"
-    
 },
 {
     "name":"UrbanTrade Solutions",
     "address":"Jose Candido, 333 Avenue",
-    "phone":"+55 (12) 22222-2222",
+    "phone":"+551222222-2222",
     "url": "urbantrade.com", 
     "email": "info@urbantrade.com",
     "image":"",
@@ -22,7 +21,7 @@
 {
     "name":"PrimeGoods Hub",
     "address":"Carlos Andrade, 1752 Street",
-    "phone":"+55 (12) 33333-3333",
+    "phone":"+551233333-3333",
     "url": "primehub.com", 
     "email": "support@primehub.com",
     "image":"",
@@ -32,7 +31,7 @@
 {
     "name":"Mercantile Ventures",
     "address":"Batatais, 159 Sreet",
-    "phone":"+55 (12) 44444-444",
+    "phone":"+551244444-444",
     "url": "mercantile.com", 
     "email": "hello@mercantile.com",
     "image":"",
@@ -42,7 +41,7 @@
 {
     "name":"VistaMart Enterprises",
     "address":"Cuiaba, 166 Avenue",
-    "phone":"+55 (12) 55555-5555",
+    "phone":"+551255555-5555",
     "url": "vistamart.com",
     "email": "contact@vistamart.com",
     "image":"",
@@ -52,7 +51,7 @@
 {
     "name":"TradeStreet Emporium",
     "address":"Honorato G, 222 Street",
-    "phone":"+55 (12) 11111-1111",
+    "phone":"+551211111-1111",
     "url": "tradestreet.com", 
     "email": "info@tradestreet.com",
     "image":"",
@@ -62,7 +61,7 @@
 {
     "name":"EcoCommerce Hub",
     "address":"Honorato G, 222 Street",
-    "phone":"+55 (12) 11111-1111",
+    "phone":"+551211111-1111",
     "url": "ecohub.com", 
     "email": "support@ecohub.com",
     "image":"",
@@ -72,7 +71,7 @@
 {
     "name":"BrightTrade Marketplace",
     "address":"Honorato G, 222 Street",
-    "phone":"+55 (12) 11111-1111",
+    "phone":"+551211111-1111",
     "url": "brighttrade.com", 
     "email": "contact@brighttrade.com",
     "image":"",
