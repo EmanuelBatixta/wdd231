@@ -6,8 +6,8 @@
     "email": "contact@marketwave.com",
     "image":"",
     "membershipLevel":3,
-    "membershipTime":"5 months"
-    
+    "membershipTime":"5 months",
+    "tag": "Finance"    
 },
 {
     "name":"UrbanTrade Solutions",
@@ -17,7 +17,8 @@
     "email": "info@urbantrade.com",
     "image":"",
     "membershipLevel":2,
-    "membershipTime":"1 month"
+    "membershipTime":"1 month",
+    "tag": "Urban Commerce"
 },
 {
     "name":"PrimeGoods Hub",
@@ -27,7 +28,8 @@
     "email": "support@primehub.com",
     "image":"",
     "membershipLevel":1,
-    "membershipTime":"8 months"
+    "membershipTime":"8 months",
+    "tag": "Technology"
 },
 {
     "name":"Mercantile Ventures",
@@ -37,7 +39,8 @@
     "email": "hello@mercantile.com",
     "image":"",
     "membershipLevel":2,
-    "membershipTime":"9 months"
+    "membershipTime":"9 months",
+    "tag": "Import and Export"
 },
 {
     "name":"VistaMart Enterprises",
@@ -47,7 +50,9 @@
     "email": "contact@vistamart.com",
     "image":"",
     "membershipLevel":3,
-    "membershipTime":"12 months"
+    "membershipTime":"12 months",
+    "tag": "Retail"
+    
 },
 {
     "name":"TradeStreet Emporium",
@@ -57,7 +62,8 @@
     "email": "info@tradestreet.com",
     "image":"",
     "membershipLevel":1,
-    "membershipTime":"1 month"
+    "membershipTime":"1 month",
+    "tag": "Commerce"
 },
 {
     "name":"EcoCommerce Hub",
@@ -67,8 +73,8 @@
     "email": "support@ecohub.com",
     "image":"",
     "membershipLevel":1,
-    "membershipTime":"1 month"
-},
+    "membershipTime":"1 month",
+    "tag": "Sustainability"}
 {
     "name":"BrightTrade Marketplace",
     "address":"Honorato G, 222 Street",
@@ -77,5 +83,6 @@
     "email": "contact@brighttrade.com",
     "image":"",
     "membershipLevel":2,
-    "membershipTime":"7 months"
+    "membershipTime":"7 months",
+    "tag": "Investments"
 }]
