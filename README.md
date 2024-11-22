@@ -42,4 +42,5 @@ To clone and explore this repository, follow these steps:
    git clone https://github.com/your-username/wdd231.git
 
 
-   https://emanuelbatixta.github.io/wdd231/
+To see my website running:
+https://emanuelbatixta.github.io/wdd231/
