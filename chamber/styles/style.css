@@ -228,18 +228,22 @@ footer h3{
     #pagetitle{
         grid-row: 1;
     }
+
     main{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto auto 1fr;
+        max-width: 90vw;
+        margin: 1rem auto;
     }
 
     .events, .weather, .forecast{
         grid-row: 2;
     }
+
     .business{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 1rem;
         grid-row: 3;
         grid-column:1/4 ;

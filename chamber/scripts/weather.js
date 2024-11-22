@@ -11,7 +11,7 @@ async function apiFetch(){
         displayResults(data)
     }
     catch(error){
-        window.alert(error)
+        console.log(error)
     }
 }
 const currentTemp = document.querySelector(".weather")

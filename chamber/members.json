@@ -1,7 +1,7 @@
 [{
     "name":"MarketWave Trading",
     "address":"Honorato G, 222 Street",
-    "phone":"1211111-1111",
+    "phone":"+5511111-1111",
     "url": "marketwave.com",
     "email": "contact@marketwave.com",
     "image":"",
@@ -12,7 +12,7 @@
 {
     "name":"UrbanTrade Solutions",
     "address":"Jose Candido, 333 Avenue",
-    "phone":"1222222-2222",
+    "phone":"+5522222-2222",
     "url": "urbantrade.com", 
     "email": "info@urbantrade.com",
     "image":"",
@@ -23,7 +23,7 @@
 {
     "name":"PrimeGoods Hub",
     "address":"Carlos Andrade, 1752 Street",
-    "phone":"1233333-3333",
+    "phone":"+5533333-3333",
     "url": "primehub.com", 
     "email": "support@primehub.com",
     "image":"",
@@ -34,7 +34,7 @@
 {
     "name":"Mercantile Ventures",
     "address":"Batatais, 159 Sreet",
-    "phone":"1244444-444",
+    "phone":"+5544444-444",
     "url": "mercantile.com", 
     "email": "hello@mercantile.com",
     "image":"",
@@ -45,19 +45,19 @@
 {
     "name":"VistaMart Enterprises",
     "address":"Cuiaba, 166 Avenue",
-    "phone":"1255555-5555",
+    "phone":"+5555555-5555",
     "url": "vistamart.com",
     "email": "contact@vistamart.com",
     "image":"",
     "membershipLevel":3,
-    "membershipTime":"12 months",
+    "membershipTime":"+55 months",
     "tag": "Retail"
     
 },
 {
     "name":"TradeStreet Emporium",
     "address":"Honorato G, 222 Street",
-    "phone":"1211111-1111",
+    "phone":"+5511111-1111",
     "url": "tradestreet.com", 
     "email": "info@tradestreet.com",
     "image":"",
@@ -68,7 +68,7 @@
 {
     "name":"EcoCommerce Hub",
     "address":"Honorato G, 222 Street",
-    "phone":"1211111-1111",
+    "phone":"+5511111-1111",
     "url": "ecohub.com", 
     "email": "support@ecohub.com",
     "image":"",
@@ -79,7 +79,7 @@
 {
     "name":"BrightTrade Marketplace",
     "address":"Honorato G, 222 Street",
-    "phone":"1211111-1111",
+    "phone":"+5511111-1111",
     "url": "brighttrade.com", 
     "email": "contact@brighttrade.com",
     "image":"",
