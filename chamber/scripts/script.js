@@ -18,19 +18,16 @@ modified.innerHTML=`<span id="lastModified"> ${document.lastModified}</span>`
 const business = document.querySelector(".business")
 
 // fetch enterprises
-const info = document.querySelector(".business")
-const entUrl = "https://raw.githubusercontent.com/EmanuelBatixta/wdd231/refs/heads/main/chamber/members.json"
-
 async function getEnterprises() {
+  const entUrl = "https://raw.githubusercontent.com/EmanuelBatixta/wdd231/refs/heads/main/chamber/members.json"
   const response = await fetch(entUrl);
   const data = await response.json();
   console.log(data)
   createEnterpriseCard(data)
 }
 
-getEnterprises()
-
 function createEnterpriseCard(data){
+  const info = document.querySelector(".business")
   info.innerHTML = ``;
   data.forEach(ent => {
     // create elements of the business card
@@ -58,8 +55,10 @@ function createEnterpriseCard(data){
     phone.setAttribute('target', `_blank`)
     url.setAttribute('href',`https://www.${ent.url}`)
     url.setAttribute('target',`_blank`)
-
     
+    mail.classList.add("infoList")
+    phone.classList.add("infoList")
+
     //add
     card.appendChild(nameTitle);
     card.appendChild(tag);
@@ -70,4 +69,23 @@ function createEnterpriseCard(data){
 
     info.appendChild(card)
   });
+}
+getEnterprises()
+
+
+const gridbutton = document.querySelector("#grid");
+const listbutton = document.querySelector("#list");
+const enterprise = document.querySelector(".business");
+const card = document.querySelector(".card");
+
+gridbutton.addEventListener("click", () => {
+  enterprise.classList.add("grid"); 
+  enterprise.classList.remove("list"); 
+  }
+); 
+
+listbutton.addEventListener("click", showList);
+function showList() {
+  enterprise.classList.add("list");
+  enterprise.classList.remove("grid");
 }
