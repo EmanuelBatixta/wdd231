@@ -61,6 +61,7 @@ nav a:hover{
 header img{
     background-color: var(--fourthColor);
     border-radius: 20rem;
+    width: 100px;
 }
 
 .actual{
@@ -92,6 +93,39 @@ header img{
 
 .open a{
     display: block;
+}
+/* hero image ############################################## */
+.hero{
+    display: flex;
+    position: static;
+    max-width: 100vw;
+    padding: 0;
+    background-image: url(/chamber/images/hero-large.webp);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 500px;
+}
+.hero img{
+    max-height: 300px;
+}
+
+.joinbtn{
+    position: absolute;
+    top: 80%;
+    right: 10%;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    max-width: 200px;
+    border: none;
+    color: var(--textColor);
+    background: var(--tirdColor);
+    transition: ease .5s;
+    font-weight: bold;
+}
+.joinbtn:hover{
+    background: var(--fourthColor);
 }
 
 /* main configuration ############################################# */
@@ -200,6 +234,10 @@ section h2{
     display: none;
 }
 
+.list span{
+    display: none;
+}
+
 .toogleButton{
     display: flex;
     flex-direction: row;
@@ -244,10 +282,19 @@ footer a:hover{
 footer h3{
     color: var(--fourthColor);
 }
+.medias{
+    display: flex;
+    gap: 1rem;
+}
 
 .medias img{
-    width:60px;
+    width:30px;
     color: var(--fourthColor);
+    transition: ease .9ms;
+}
+
+.medias img:hover{
+    width: 35px;
 }
 
 @media screen and (min-width:700px) {
@@ -262,6 +309,17 @@ footer h3{
         width: 15vw;
         max-width: 150px;
     }
+    header{
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+        gap: 2rem;
+    }
+
+    header div{
+        padding: 0;
+    }
+
     header img{
         max-width: 100px;
     }
@@ -287,7 +345,23 @@ footer h3{
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 1rem;
         grid-row: 3;
-        grid-column:1/4 ;
+        grid-column:1/4;
+    }
+
+    .list{
+        display: flex;
+    }
+    .list span{
+        display:  none;
+    }
+
+    .list .infoList{
+        display: block;
+    }
+
+    .list section{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(50px,200px));
     }
 
     footer{
@@ -302,9 +376,13 @@ footer h3{
     }
     .medias{
         grid-column: 2;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
     .courseInfo{
         grid-column: 3;
+        text-align: right;
     }
 
 }
@@ -334,5 +412,14 @@ footer h3{
     .business{
         grid-row: 5;
         grid-column: 1/6;
+    }
+    .medias{
+        grid-column: 2;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .courseInfo{
+        text-align: left;
     }
 }
