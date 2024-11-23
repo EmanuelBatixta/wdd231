@@ -215,7 +215,14 @@ section h2{
 }
 
 .grid section img{
+    align-items: center;
+    justify-content: center;
     grid-column: 1;
+    margin: auto;
+    padding: 1rem;
+    background-color: var(--fourthColor);
+    border-radius: 50%;
+    grid-row: 3/6;
 }
 
 .list section{
