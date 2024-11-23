@@ -4,7 +4,7 @@
     "phone":"+5511111-1111",
     "url": "marketwave.com",
     "email": "contact@marketwave.com",
-    "image":"",
+    "image":"images/marketwave.webp",
     "membershipLevel":3,
     "membershipTime":"5 months",
     "tag": "Finance"    
@@ -15,7 +15,7 @@
     "phone":"+5522222-2222",
     "url": "urbantrade.com", 
     "email": "info@urbantrade.com",
-    "image":"",
+    "image":"images/urbantrade.webp",
     "membershipLevel":2,
     "membershipTime":"1 month",
     "tag": "Urban Commerce"
@@ -26,7 +26,7 @@
     "phone":"+5533333-3333",
     "url": "primehub.com", 
     "email": "support@primehub.com",
-    "image":"",
+    "image":"images/primegoods.webp",
     "membershipLevel":1,
     "membershipTime":"8 months",
     "tag": "Technology"
@@ -37,7 +37,7 @@
     "phone":"+5544444-444",
     "url": "mercantile.com", 
     "email": "hello@mercantile.com",
-    "image":"",
+    "image":"images/mercantile-ventures.webp",
     "membershipLevel":2,
     "membershipTime":"9 months",
     "tag": "Import and Export"
@@ -48,7 +48,7 @@
     "phone":"+5555555-5555",
     "url": "vistamart.com",
     "email": "contact@vistamart.com",
-    "image":"",
+    "image":"images/vistamart.webp",
     "membershipLevel":3,
     "membershipTime":"+55 months",
     "tag": "Retail"
@@ -60,7 +60,7 @@
     "phone":"+5511111-1111",
     "url": "tradestreet.com", 
     "email": "info@tradestreet.com",
-    "image":"",
+    "image":"images/tradestreet.webp",
     "membershipLevel":1,
     "membershipTime":"1 month",
     "tag": "Commerce"
@@ -71,7 +71,7 @@
     "phone":"+5511111-1111",
     "url": "ecohub.com", 
     "email": "support@ecohub.com",
-    "image":"",
+    "image":"images/ecocommerce.webp",
     "membershipLevel":1,
     "membershipTime":"1 month",
     "tag": "Sustainability"
@@ -82,7 +82,7 @@
     "phone":"+5511111-1111",
     "url": "brighttrade.com", 
     "email": "contact@brighttrade.com",
-    "image":"",
+    "image":"images/brighttrade.webp",
     "membershipLevel":2,
     "membershipTime":"7 months",
     "tag": "Investments"
