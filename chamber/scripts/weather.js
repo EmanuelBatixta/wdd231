@@ -2,6 +2,7 @@ const key = "5eb185939858cdcb14f2ca3d22cf03e4";
 const lat = "-23.21788441963602"
 const lon = "-45.89116845341678"
 const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`
+const urlForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=7&appid=${key}&units=metric`
 
 async function apiFetch(){
     try{
@@ -15,6 +16,7 @@ async function apiFetch(){
     }
 }
 const currentTemp = document.querySelector(".weather")
+const forecastinfo = document.querySelector(".forecast")
 
 function displayResults(data) {
     const div = document.createElement("div")
@@ -54,5 +56,45 @@ function displayResults(data) {
 
     currentTemp.appendChild(div)
 }
+
+async function apiFetchForecast() {
+    try{
+        const response = await fetch(urlForecast)
+        const data = await response.json()
+        console.log(data)
+        displayForecast(data)
+    }
+    catch(error){
+        console.log(error)
+    }
+}
+
+
+function formatToWeekday(dateString) { 
+    // Ajusta a string de data para o formato ISO 8601 
+    const isoDateString = dateString.replace(" ", "T"); 
+    const date = new Date(isoDateString); 
+    const options = { weekday: 'long' }; 
+    return new Intl.DateTimeFormat('en-US', options).format(date);
+}
+
+function displayForecast(data){
+    data.list.forEach(tempFore  => {
+        const dateForecast = document.createElement("h4");
+        const tempForecast = document.createElement("p");
+        const conForecast = document.createElement("p");
+
+        dateForecast.textContent = formatToWeekday(tempFore.dt_txt)
+        tempForecast.innerHTML = `${tempFore.main.temp.toFixed(0)}&deg;C`
+        conForecast.textContent = tempFore.weather[0].description
+
+        forecastinfo.appendChild(dateForecast)        
+        forecastinfo.appendChild(tempForecast)        
+        forecastinfo.appendChild(conForecast)        
+    });
+
+}
+
+apiFetchForecast()
 
 apiFetch()
