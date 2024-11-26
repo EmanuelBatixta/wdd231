@@ -23,7 +23,7 @@ body{
 header{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     padding: 1rem 0 0 0;
     background: var(--textColor);
@@ -63,6 +63,10 @@ header img{
     border-radius: 20rem;
     width: 100px;
 }
+header h1{
+    max-width: 100px;
+
+}
 
 .actual{
     color: var(--fourthColor);
@@ -72,7 +76,7 @@ header img{
 /* hamburguer button ###############################################*/
 .hamburguer{
     position: absolute;
-    top: 4.5rem;
+    top: 3rem;
     right: 1.8rem;
     font-size: 2rem;
     color: white;
@@ -100,7 +104,7 @@ header img{
     position: static;
     max-width: 100vw;
     padding: 0;
-    background-image: url(https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-image: url(/chamber/images/hero.webp);
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -176,6 +180,27 @@ section h2{
     font-weight: bold;
     font-size: 1.5rem;
 }
+
+/* enterprises card*/
+.filters{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+} 
+.filters button{
+    padding: 1rem;
+    width: 100px;
+    border-radius: 1rem;
+    border: 1px solid var(--tirdColor);
+    background: var(--secondaryColor);
+    color: var(--fourthColor);
+    transition: .5s ease;
+    font-weight: bold;
+}
+.filters button:hover{
+    background: var(--textColor);
+}
+
 
 .business{
     display:  flex;
@@ -321,10 +346,15 @@ footer h3{
         flex-direction: row;
         padding: 1rem;
         gap: 2rem;
+        align-items: center;
+    }
+    header h1{
+        max-width: 300px;
     }
 
     header div{
         padding: 0;
+        margin-left: 2rem;
     }
 
     header img{
@@ -346,12 +376,18 @@ footer h3{
     .events, .weather, .forecast{
         grid-row: 2;
     }
+    
+    .filters{
+        margin-top: 1.5rem;
+        grid-row:3;
+        grid-column:1/4;
+    }
 
     .business{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 1rem;
-        grid-row: 3;
+        grid-row: 4;
         grid-column:1/4;
     }
 

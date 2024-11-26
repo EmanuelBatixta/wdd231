@@ -34,7 +34,7 @@
 </head>
 <body>
     <header>
-        <button class="hamburguer"></button>
+        <button class="hamburguer" aria-label="hambuger-button"></button>
         <div>
             <img src="images/download.webp" alt="Sanja chamber logo" loading="lazy">
             <h1>SANJA CHAMBER</h1>
@@ -62,6 +62,12 @@
         <section class="forecast">
             <h2>Weather Forecast</h2>
         </section>
+        <span class="filters">
+            <button id="all-btn" aria-label="all btn">All</button>
+            <button id="member-btn" aria-label="member btn">Member</button>
+            <button id="silver-btn" aria-label="silver btn">Silver</button>
+            <button id="gold-btn" aria-label="gold btn">Gold</button>
+        </span>
         <section class="business grid"></section>
     </main>
     <footer>

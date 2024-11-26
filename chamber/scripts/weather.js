@@ -40,6 +40,7 @@ function displayResults(data) {
     // setting attributes
     weatherIcon.setAttribute('src', iconsrc);
     weatherIcon.setAttribute('alt', desc);
+    weatherIcon.setAttribute('loading', "lazy");
     div.setAttribute("class","weatherInfo")
     temp.setAttribute("class","temp")
     

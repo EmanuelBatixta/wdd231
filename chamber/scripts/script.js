@@ -18,12 +18,17 @@ modified.innerHTML=`<span id="lastModified"> ${document.lastModified}</span>`
 const business = document.querySelector(".business")
 
 // fetch enterprises
-async function getEnterprises() {
+async function getEnterprises(filter = null) {
   const entUrl = "https://raw.githubusercontent.com/EmanuelBatixta/wdd231/refs/heads/main/chamber/members.json"
   const response = await fetch(entUrl);
   const data = await response.json();
   console.log(data)
-  createEnterpriseCard(data)
+  if (filter){
+    const filteredData = data.filter(filter)
+    createEnterpriseCard(filteredData)
+  } else{
+    createEnterpriseCard(data)
+  }
 }
 
 function createEnterpriseCard(data){
@@ -70,22 +75,52 @@ function createEnterpriseCard(data){
     info.appendChild(card)
   });
 }
-getEnterprises()
 
+function filteredMember(memberType){
+  var filters;
+  if(memberType === "all"){
+    getEnterprises()
+  } else if(memberType === "member"){
+    filters = ent => ent.membershipLevel == 1;
+    getEnterprises(filters)
+  } else if(memberType === "silver"){
+    filters = ent => ent.membershipLevel == 2;
+    getEnterprises(filters)
+  } else if(memberType === "gold") {
+    filters = ent => ent.membershipLevel == 3;
+    getEnterprises(filters)
+  }
+}
 
+getEnterprises( )
+
+const allMembers = document.querySelector("#all-btn")
+const members = document.querySelector("#member-btn")
+const silverMembers = document.querySelector("#silver-btn")
+const goldMembers = document.querySelector("#gold-btn")
+
+allMembers.addEventListener("click",() => filteredMember("all"))
+members.addEventListener("click",() => filteredMember("member"))
+silverMembers.addEventListener("click",() => filteredMember("silver"))
+goldMembers.addEventListener("click",() => filteredMember("gold"))
+
+// switch toogle 
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
 const enterprise = document.querySelector(".business");
 const card = document.querySelector(".card");
 
-gridbutton.addEventListener("click", () => {
-  enterprise.classList.add("grid"); 
-  enterprise.classList.remove("list"); 
-  }
-); 
+if (gridbutton){
+  gridbutton.addEventListener("click", () => {
+    enterprise.classList.add("grid"); 
+    enterprise.classList.remove("list"); 
+    }
+  );
 
-listbutton.addEventListener("click", showList);
-function showList() {
-  enterprise.classList.add("list");
-  enterprise.classList.remove("grid");
+  listbutton.addEventListener("click", showList);
+  function showList() {
+    enterprise.classList.add("list");
+    enterprise.classList.remove("grid");
+  };
 }
+
