@@ -2,7 +2,7 @@ const key = "5eb185939858cdcb14f2ca3d22cf03e4";
 const lat = "-23.21788441963602"
 const lon = "-45.89116845341678"
 const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`
-const urlForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=7&appid=${key}&units=metric`
+const urlForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key}&units=metric`
 
 async function apiFetch(){
     try{
@@ -62,37 +62,64 @@ async function apiFetchForecast() {
         const response = await fetch(urlForecast)
         const data = await response.json()
         console.log(data)
-        displayForecast(data)
+        displayForecast(processWeatherData(data))
     }
     catch(error){
         console.log(error)
     }
 }
 
+function displayForecast(data){
+    data.forEach(tempFore  => {
+        const div = document.createElement("div");
+        const dateForecast = document.createElement("h4");
+        const minForecast = document.createElement("p");
+        const maxForecast = document.createElement("p");
+        const imgForecast = document.createElement("img");
 
-function formatToWeekday(dateString) { 
-    // Ajusta a string de data para o formato ISO 8601 
-    const isoDateString = dateString.replace(" ", "T"); 
-    const date = new Date(isoDateString); 
-    const options = { weekday: 'long' }; 
-    return new Intl.DateTimeFormat('en-US', options).format(date);
+        dateForecast.textContent = tempFore.date;
+        minForecast.innerHTML = `Min: ${tempFore.minTemp}&deg;C`;
+        maxForecast.innerHTML = `Max: ${tempFore.maxTemp}&deg;C`;
+        const icon = `https://openweathermap.org/img/w/${tempFore.icon}.png`
+
+        minForecast.classList.add("minmax");
+        maxForecast.classList.add("minmax");
+        imgForecast.setAttribute('src', icon);
+        imgForecast.setAttribute('alt', tempFore.desc);
+        imgForecast.setAttribute('loading', "lazy");
+
+        div.appendChild(dateForecast)        
+        div.appendChild(imgForecast)     
+        div.appendChild(minForecast)        
+        div.appendChild(maxForecast)        
+        
+        forecastinfo.appendChild(div)
+    });
 }
 
-function displayForecast(data){
-    data.list.forEach(tempFore  => {
-        const dateForecast = document.createElement("h4");
-        const tempForecast = document.createElement("p");
-        const conForecast = document.createElement("p");
-
-        dateForecast.textContent = formatToWeekday(tempFore.dt_txt)
-        tempForecast.innerHTML = `${tempFore.main.temp.toFixed(0)}&deg;C`
-        conForecast.textContent = tempFore.weather[0].description
-
-        forecastinfo.appendChild(dateForecast)        
-        forecastinfo.appendChild(tempForecast)        
-        forecastinfo.appendChild(conForecast)        
+function processWeatherData(data) {
+    const days = {}; 
+    data.list.forEach(item => {
+        const date = new Date(item.dt * 1000).toLocaleDateString("en-US", {weekday: "short"});
+        if (!days[date]) { 
+            days[date] = []; 
+        } 
+        days[date].push(item);
     });
-
+    const forecast = Object.keys(days).slice(1, 4).map(date => {
+        const dayData = days[date]; 
+        const temps = dayData.map(entry => entry.main.temp); 
+        const minTemp = Math.min(...temps); 
+        const maxTemp = Math.max(...temps); 
+        return {
+            date: date, 
+            minTemp: minTemp.toFixed(0),
+            maxTemp: maxTemp.toFixed(0), 
+            icon: dayData[0].weather[0].icon,
+            desc: dayData[0].weather[0].description,
+        };
+    });
+    return forecast;
 }
 
 apiFetchForecast()

@@ -3,7 +3,7 @@ import { createEnterpriseCard } from "./enterprises.js";
 async function getEnterprises() {
     try{
         const business = document.querySelector(".business")
-        const entUrl = "/chamber/members.json"
+        const entUrl = "https://raw.githubusercontent.com/EmanuelBatixta/wdd231/refs/heads/main/chamber/members.json"
         const response = await fetch(entUrl);
         const data = await response.json();
         console.log(data)
