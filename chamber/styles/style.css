@@ -104,7 +104,7 @@ header h1{
     position: static;
     max-width: 100vw;
     padding: 0;
-    background-image: url(https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-image: url(https://raw.githubusercontent.com/EmanuelBatixta/wdd231/refs/heads/main/chamber/images/hero.webp);
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;

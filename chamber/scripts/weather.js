@@ -106,7 +106,7 @@ function processWeatherData(data) {
         } 
         days[date].push(item);
     });
-    const forecast = Object.keys(days).slice(1, 4).map(date => {
+    const forecast = Object.keys(days).slice(0, 3).map(date => {
         const dayData = days[date]; 
         const temps = dayData.map(entry => entry.main.temp); 
         const minTemp = Math.min(...temps); 
