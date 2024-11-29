@@ -1,11 +1,13 @@
+// footer  #####################################################
 const lastModified = document.querySelector("#lastModified");
 const currentyear = document.querySelector("#currentyear");
 
 const today = new Date();
 
-currentyear.innerHTML = `©️ <span id="currentyear">${today.getFullYear()}</span>`;
+currentyear.innerHTML = `© <span id="currentyear">${today.getFullYear()}</span>`;
 lastModified.innerHTML = `Last Modified: ${document.lastModified}`;
 
+// Hamburguer button #####################################################
 const hamButton = document.querySelector('.hamburguer');
 const navigation = document.querySelector('#nav');
 
@@ -14,6 +16,7 @@ hamButton.addEventListener('click', () => {
     hamButton.classList.toggle('open');
 });
 
+// Courses #####################################################
 const courses = [
     {
         subject: 'CSE',
@@ -117,10 +120,16 @@ function coursesTab(courses){
             grade.classList.add("complete")
         }
         document.querySelector("#courses").appendChild(grade);
+
+        grade.addEventListener("click", ()=>{
+            displayModal(course)
+        })
     });
 }
 
 coursesTab(courses);
+
+// Filters #####################################################
 
 const allCourse = document.querySelector("#all");
 const wddCourse = document.querySelector("#wdd");
@@ -151,3 +160,27 @@ cseCourse.addEventListener("click", () => {
     wddCourse.classList.remove("active");
     cseCourse.classList.add("active");
 });
+
+// Modal function #####################################################
+const courseDetails = document.querySelector("#course-details");
+
+function displayModal(course){
+    courseDetails.innerHTML=``;
+    courseDetails.innerHTML=`
+    <div>
+        <h2>${course.subject}${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p>${course.credits} credits</p>
+        <p>${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technologies</strong>: ${course.technology.join(", ")}</p>
+        <button id="closeModal">❌</button>
+    </div>
+    `;
+    courseDetails.showModal();
+
+    closeModal.addEventListener("click", ()=> {
+        courseDetails.close();
+    })
+
+}
