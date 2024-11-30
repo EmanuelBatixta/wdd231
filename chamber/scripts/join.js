@@ -105,28 +105,29 @@ if(np){
 }
 
 const sec = document.querySelector(".thanks");
-const currentUrl = window.location.href;
-const all = currentUrl.split("?")[1]
-const itens = all.split("&")
+if(sec){
+    const currentUrl = window.location.href;
+    const all = currentUrl.split("?")[1]
+    const itens = all.split("&")
 
-console.log(itens)
+    function show(cup){
+        itens.forEach(i=>{
+            if(i.startsWith(cup)){
+                result = i.split("=")[1].replace("%40","@")
+                result = i.trim()
+            }
+        })
+        console.log(result)
+        return result
+    }
 
-function show(cup){
-    itens.forEach(i=>{
-        if(i.startsWith(cup)){
-            result = i.split("=")[1].replace("%40","@")
-        }
-    })
-    console.log(result)
-    return result
+    sec.innerHTML =`
+        <h2>Thanks for your application</h2>
+        <h3>Dear ${show("fname")} ${show("lname")},</h3>
+        <p>We recieve the application for your business: <strong>${show("busi")}</strong></p>
+        <p>You are <strong>${show("orga")}</strong> in this business</p>
+        <p>Your phone to contact is: <strong>${show("phone")}</strong></p>
+        <p>Your email to contact is: <strong>${show("email")}</strong></p>
+        <p>Your business description:<br> <strong>${show("descri")}</strong></p>
+    `;
 }
-
-sec.innerHTML =`
-    <h2>Thanks for your application</h2>
-    <h3>Dear ${show("fname")} ${show("lname")},</h3>
-    <p>We recieve the application for your business: <strong>${show("busi")}</strong></p>
-    <p>You are <strong>${show("orga")}</strong> in this business</p>
-    <p>Your phone to contact is: <strong>${show("phone")}</strong></p>
-    <p>Your email to contact is: <strong>${show("email")}</strong></p>
-    <p>Your business description:<br> <strong>${show("descri")}</strong></p>
-`;
