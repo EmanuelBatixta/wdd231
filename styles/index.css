@@ -226,7 +226,7 @@ dialog{
     width: 90%;
     max-width: 500px;
     gap:.5rem;
-    margin: auto;
+    margin: auto; 
 }
 
 ::backdrop{

@@ -30,3 +30,8 @@ async function getEnterprises() {
 }
 
 getEnterprises()
+
+const btn = document.querySelector(".joinbtn");
+btn.addEventListener("click",()=> {
+    window.location.href = "join.html"
+})

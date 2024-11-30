@@ -11,8 +11,7 @@
     <!-- External imports -->
     <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/script.js" defer></script>
-    <script src="scripts/index.js" defer type="module"></script>
-    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/join.js" defer type="module"></script>
     
     <!--Social media informaçoes-->
     <meta property="og:title" content="NullArt Chamber">
@@ -41,28 +40,66 @@
             <h1>SANJA CHAMBER</h1>
         </div>
         <nav id="nav">
-            <a href="#" class="actual">Home</a>
+            <a href="index.html">Home</a>
             <a href="discovery.html">Discovery</a>
             <a href="directory.html">Directory</a>
-            <a href="join.html">Join</a>
+            <a href="#" class="actual">Join</a>
         </nav>
     </header> 
-    <section class="hero">
-        <button class="joinbtn"><a href="join.html"> Join </a></button>
-    </section>
-    <main>
-        <h2 id="pagetitle">Home</h2>
-        <section class="events">
-            <h2>Events</h2>
-        </section>
-        <section class="weather">
-            <h2>Current Weather</h2>
+    <main class="mainjoin">
+        <section class="apply">
+            <h2>Membership Application</h2>
+            <form action="thankyou.html">
+                <label for="fname">First name: <input type="text" name="fname" id="fname" autocomplete="given-name" title="Enter your First Name" required></label>
 
+                <label for="lname">Last name: <input type="text" name="lname" id="lname" autocomplete="family-name" title="Enter your Last Name" required ></label>
+
+                <label for="orgazational">Organizational title: <input type="orgazational" name="orgazational" id="orgazational" title="Enter your orgazational title" autocomplete="organization-title" required></label>
+
+                <label for="email">Email: <input type="email" name="email" id="email" placeholder="example@example.com" autocomplete="email" title="Enter your Email" required></label>
+
+                <label for="phone">Phone number: <input type="tel" name="phone" id="phone" placeholder="+55 (00) 00000-0000" autocomplete="tel" title="Enter your phone number" required></label>
+
+                <label for="business">Business/ organization name: <input type="text" name="business" id="business" autocomplete="organization" title="Enter your Business name" pattern="[A-Za-z\s\-]{7,}" required></label>
+
+                <label for="membership">Membership Level: 
+                    <select type="membership" name="membership" id="membership" placeholder="Select a membership" title="Choose one membership level" required>
+                        <option value aria-label="Choose one..." selected disabled>Choose one...</option>
+                        <option value="non-profit" aria-label="non-profit">Non-Profit</option>
+                        <option value="bronze" aria-label="bronze">Bronze</option>
+                        <option value="silver" aria-label="silver">Silver</option>
+                        <option value="gold" aria-label="gold">Gold</option>
+                    </select>
+                </label>
+
+                <label for="description">Business/Organization Description: <textarea id="description" name="description" rows="4" cols="50" title="A description of your business" aria-label="A description of your business"></textarea></label>
+                <input type="hidden" id="timestamp" name="timestamp">
+
+                <input type="submit" value="Apply for Membership" aria-label="  apply">
+            </form>
         </section>
-        <section class="forecast">
-            <h2>Weather Forecast</h2>
+
+        <section class="levels">
+            <h2>Membership levels</h2>
+            <div class="membership mnp">
+                <h3>Non Profit Membership Level</h3>
+                <button id="mnp">Read More</button>
+            </div>
+            <div class="membership mbronze">
+                <h3>Bronze Membership Level</h3>
+                <button id="mbronze">Read More</button>
+            </div>
+            <div class="membership msilver">
+                <h3>Silver Membership Level</h3>
+                <button id="msilver">Read More</button>
+            </div>
+            <div class="membership mgold">
+                <h3>Gold Membership Level</h3>
+                <button id="mgold">Read More</button>
+            </div>
+            <dialog class="levelsmodal"></dialog>
         </section>
-        <section class="business grid"></section>
+        
     </main>
     <footer>
         <div class="enterprise">
