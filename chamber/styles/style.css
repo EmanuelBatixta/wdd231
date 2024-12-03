@@ -331,6 +331,8 @@ textarea{
     border-radius: .5rem;
     border: 1px solid var(--textColor);
     padding: .8rem;
+    width: 700px;
+    max-width: 100%;
 }
 
 .apply input:required, select:required{
