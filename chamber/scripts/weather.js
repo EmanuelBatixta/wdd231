@@ -16,7 +16,7 @@ async function apiFetch(){
     }
 }
 const currentTemp = document.querySelector(".weather")
-const forecastinfo = document.querySelector(".forecast")
+const forecastinfo = document.querySelector(".forecastDetails")
 
 function displayResults(data) {
     const div = document.createElement("div")
@@ -78,35 +78,41 @@ function displayForecast(data){
         const imgForecast = document.createElement("img");
 
         dateForecast.textContent = tempFore.date;
-        minForecast.innerHTML = `Min: ${tempFore.minTemp}&deg;C`;
-        maxForecast.innerHTML = `Max: ${tempFore.maxTemp}&deg;C`;
+        maxForecast.innerHTML = `${tempFore.maxTemp}&deg;C`;
+        minForecast.innerHTML = `${tempFore.minTemp}&deg;C`;
         const icon = `https://openweathermap.org/img/w/${tempFore.icon}.png`
 
-        minForecast.classList.add("minmax");
-        maxForecast.classList.add("minmax");
+        maxForecast.classList.add("minmax","maxTemp");
+        minForecast.classList.add("minmax","minTemp");
         imgForecast.setAttribute('src', icon);
         imgForecast.setAttribute('alt', tempFore.desc);
         imgForecast.setAttribute('loading', "lazy");
 
         div.appendChild(dateForecast)        
         div.appendChild(imgForecast)     
-        div.appendChild(minForecast)        
         div.appendChild(maxForecast)        
+        div.appendChild(minForecast)        
         
         forecastinfo.appendChild(div)
     });
 }
 
+const hoje = new Date().toLocaleDateString("en-US", {weekday: "short"});
+console.log(hoje)
+
 function processWeatherData(data) {
     const days = {}; 
     data.list.forEach(item => {
-        const date = new Date(item.dt * 1000).toLocaleDateString("en-US", {weekday: "short"});
+        let date = new Date(item.dt * 1000).toLocaleDateString("en-US", {weekday: "short"});
         if (!days[date]) { 
+            if(date === hoje){
+                date = "Today"
+            }
             days[date] = []; 
         } 
         days[date].push(item);
     });
-    const forecast = Object.keys(days).slice(0, 3).map(date => {
+    const forecast = Object.keys(days).slice(0, 7).map(date => {
         const dayData = days[date]; 
         const temps = dayData.map(entry => entry.main.temp); 
         const minTemp = Math.min(...temps); 
