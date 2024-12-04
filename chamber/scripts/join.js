@@ -114,7 +114,7 @@ if(sec){
         itens.forEach(i=>{
             if(i.startsWith(cup)){
                 result = i.split("=")[1].replace("%40","@")
-                result = i.trim()
+                result = result.trim()
             }
         })
         console.log(result)
