@@ -196,8 +196,7 @@ section h2{
 .forecastDetails{
     display: flex;
     gap: .5rem;
-    overflow-x: auto;
-
+    overflow-x: scroll;
 }
 
 .forecastDetails div{
@@ -219,6 +218,21 @@ section h2{
 .minTemp{
     font-weight: 400;
     color: var(--secondaryColor);
+}
+
+.forecastDetails::-webkit-scrollbar{
+    margin: 1rem;
+}
+
+.forecastDetails::-webkit-scrollbar{
+    border-radius:1rem;
+    border: .5rem solid var(--fourthColor);
+}
+
+.forecastDetails::-webkit-scrollbar-thumb{
+    background: var(--textColor);
+    border: .3rem solid var(--fourthColor);
+    border-radius: .5rem;
 }
 
 /* enterprises card*/
@@ -389,22 +403,22 @@ input[type="submit"]:hover{
 
 .mnp{
     background: var(--fourthColor);
-    animation: levelcardL 1s;
+    animation: levelcardL 1s .6ms;
 }
 
 .mbronze{
     background:#cd7f22 ;
-    animation: levelcardR 1s;
+    animation: levelcardR 1s .7ms;
 }
 
 .msilver{
     background: #c0c0c0;
-    animation: levelcardL 1s;
+    animation: levelcardL 1s .8ms;
 }
 
 .mgold{
     background-color: #ffd700;
-    animation: levelcardR 1s;
+    animation: levelcardR 1s .9ms;
 }
 
 dialog{
