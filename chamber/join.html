@@ -54,16 +54,16 @@
 
                 <label for="lname">Last name: <input type="text" name="lname" id="lname" autocomplete="family-name" title="Enter your Last Name" required ></label>
 
-                <label for="orgazational">Organizational title: <input type="orgazational" name="orgazational" id="orgazational" title="Enter your orgazational title" autocomplete="organization-title" required></label>
+                <label for="orgazational">Organizational title: <input type="text" name="orgazational" id="orgazational" title="Enter your orgazational title" autocomplete="organization-title" required></label>
 
                 <label for="email">Email: <input type="email" name="email" id="email" placeholder="example@example.com" autocomplete="email" title="Enter your Email" required></label>
 
-                <label for="phone">Phone number: <input type="tel" name="phone" id="phone" placeholder="+55 (00) 00000-0000" autocomplete="tel" title="Enter your phone number" required></label>
+                <label for="phonef">Phone number: <input type="tel" name="phone" id="phonef" placeholder="+55 (00) 00000-0000" autocomplete="tel" title="Enter your phone number" required></label>
 
-                <label for="business">Business/ organization name: <input type="text" name="business" id="business" autocomplete="organization" title="Enter your Business name" pattern="[A-Za-z\s\-]{7,}" required></label>
+                <label for="business">Business/ organization name: <input type="text" name="business" id="business" autocomplete="organization" title="Enter your Business name" pattern="[A-Za-z\s\-]{7}" required></label>
 
                 <label for="membership">Membership Level: 
-                    <select type="membership" name="membership" id="membership" placeholder="Select a membership" title="Choose one membership level" required>
+                    <select name="membership" id="membership" title="Choose one membership level">
                         <option value aria-label="Choose one..." selected disabled>Choose one...</option>
                         <option value="non-profit" aria-label="non-profit">Non-Profit</option>
                         <option value="bronze" aria-label="bronze">Bronze</option>
