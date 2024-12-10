@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root{
+    --fColor:#00FFFD;
+    --lColor:#003333;
+    --higColor:#C3FFFD;
+    --counter-Color:#FFD7C2;
+    --night: #1c1c1c;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer, header{
+    background: var(--night);
+    padding: 1rem;
+}
+
+.boxlimmit{
+    width: 90vw;
+    margin: auto;
+}
+
+body{
+    background:#121212;
+    color: var(--higColor);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--fColor);
+    padding: 1rem;
+    display: none;
+    transition: all .3s ease;
+}
+
+nav a:hover{
+    color: var(--counter-Color);
+    background: var(--lColor);
+}
+
+/* search ################################################################################ */
+#search{
+    padding: .5rem;
+    border-radius: 1rem;
+    border: none;
+}
+
+/* hamburguer button ##################################################################### */
+.hamburguer{
+    position: absolute;
+    top: 3.5rem;
+    right: 2rem;
+    font-size: 2rem;
+    color: white;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transform: translateY(-50%) ;
+}
+
+.hamburguer::before{
+    content: "☰";
+}
+
+.hamburguer.open::before{
+    content: "✕";
+    color: var(--counter-Color);
+}
+
+.open a{
+    display: block;
+}
+
+/* banner ############################################################################### */
+.banner{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 350px;
+    background: #121212;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* movie section #########################################################################*/
+
+.top-movies{
+    margin-top: 1rem;
+}
+
+.movies{
+    margin: 1rem 0;
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem;
+}
+
+.movies::-webkit-scrollbar{
+    background-color: var(--higColor);
+    border-radius: .5rem;
+}
+
+.movies::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background: var(--lColor);
+    border: 1px solid var(--higColor);
+}
+
+/* movie card ##############*/
+
+.movie{
+    font-weight: 200;
+    text-align: start;
+    transition: all .1s ease;
+}
+
+.movie img{
+    border-radius: .5rem;
+}
+
+.movie:hover{
+    display: inline;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* movie modal ############# */
+dialog{
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    margin: auto;
+    background: var(--night);
+    color: white;
+    width: 90%;
+    max-width: 700px;
+    animation: dialog .7s;
+}
+
+dialog #mvDiv{
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 1.5rem;
+}
+
+dialog button{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    animation: all 5s ease;
+}
+
+dialog button:hover{
+    background:#121212;
+    border-radius: 3rem;
+}
+
+dialog img{
+    grid-row: 1/2;
+    grid-column: 1;
+    border-radius: .5rem;
+}
+
+dialog #relased{
+    font-weight: 200;
+    color: var(--higColor);
+    font-size: 1rem;
+}
+
+dialog span {
+    color: var(--fColor);
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+dialog #mvInf{
+    margin-top: 2.5rem;
+}
+
+::backdrop{
+    background: rgba(0,0,0,.7);
+    transition: all .7s ease;
+}
+
+#providers{
+    display: flex;
+    gap: 1rem;
+    margin: 1rem auto 0 auto;
+    color: var(--counter-Color);
+    font-weight: 100;
+}
+
+#rate{
+    margin-top: .5rem;
+    color: var(--higColor);
+    font-weight: 200;
+}
+
+/* footer ############################################################################# */
+
+.media-logos img{
+    width: 50px;
+    padding: 1rem;
+}
+
+.media-logos img:hover{
+    background: var(--lColor);
+    border-radius: 4rem;
+}
+#currentYear{
+    padding: 1rem 0 2rem 0;
+    text-align: center;
+}
+
+@keyframes dialog {
+    0%{
+        transform: translateY(-100px) scale(1.01);
+        opacity: 0;
+    }
+    50%{
+
+    }
+    100%{
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
