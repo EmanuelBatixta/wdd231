@@ -11,7 +11,6 @@
     <!-- extern links -->
     <link rel="stylesheet" href="styles/style.css" media="all">
     <script src="scripts/script.js" defer></script>
-    <script src="scripts/movies.js" defer></script>
     
     <!--Social media informaçoes-->
     <meta property="og:title" content="Bazinga Movies">
@@ -45,42 +44,21 @@
         </div>
     </header>
     <main>
-        <section class="banner">
-            <div class="boxlimmit banner-content">
-                <h1>You're Welcome,</h1>
-                <p>Here you can find any movie that you want</p>
-            </div>
-        </section>
-        <div class="boxlimmit">
-            <section class="top-movies">
-                <h2>Top Rated Movies</h2>
-                <div class="top movies"></div>
+        <div class="boxlimmit mContacts">
+            <section class="contacts">
+                <h2>Contacts</h2>
+                <p>Email: <a href="mailto:contact@bazinga.com">contact@bazinga.com</a></p>
+                <p>Tel: <a href="#">(12)91022-5698</a></p>
+                <p>You can acess our social media in the footer</p>
             </section>
-            <section class="action-movies">
-                <h2>Action</h2>
-                <div class="action movies"></div>
-            </section>           
-            <section class="family-movies">
-                <h2>Family</h2>
-                <div class="family movies"></div>
-            </section>    
-            <section class="documentary-movies">
-                <h2>Documentary</h2>
-                <div class="documentary movies"></div>
-            </section>        
-            <section class="animation-movies">
-                <h2>Animation</h2>
-                <div class="animation movies"></div>
-            </section>                   
-            <section class="drama-movies">
-                <h2>Drama</h2>
-                <div class="drama movies"></div>
-            </section>
-            <section class="comedy-movies">
-                <h2>Comedy</h2>
-                <div class="comedy movies"></div>
-            </section>           
-            <dialog class="movieModal"></dialog>
+            <form action="thanks.html" method="get" id="contact-form">
+                <h2>Let us know, what we can be better</h2>
+                <label for="name"> *Name: <input type="text" name="name" id="name" required></label>
+                <label for="mail"> *Email: <input type="email" name="mail" id="mail" required></label>
+                <label for="phone"> *Phone: <input type="tel" name="phone" id="phone" required></label>
+                <label for="textarea">*Your feedback:<textarea name="textarea" id="textarea" cols="40" rows="5" required></textarea></label>
+                <input type="submit" value="Send feedback">
+            </form>
         </div>
     </main>
     <footer>
