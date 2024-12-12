@@ -54,7 +54,7 @@ function movieCard(list, html) {
         const movieElement = document.createElement("div");
         movieElement.classList.add("movie");
         movieElement.innerHTML = ` 
-        <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} loading="lazy" width="150">
+        <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" loading="lazy" width="150">
         `;
         html.appendChild(movieElement);
 
