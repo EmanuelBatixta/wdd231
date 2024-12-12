@@ -38,7 +38,7 @@
             <img src="images/bazinga-logo.webp" alt="Bazinga movies logo" loading="lazy" width="80">
             <button class="hamburguer" aria-label="hamburguer-button"></button>
             <nav id="nav">
-                <a href="#">Home</a>
+                <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="contacts.html">Contacts</a>
             </nav>
@@ -55,37 +55,12 @@
                 </form>
             </div>
         </section>
-        <div class="boxlimmit">
-            <section class="top-movies">
-                <h2>Top Rated Movies</h2>
-                <div class="top movies"></div>
-            </section>
-            <section class="action-movies">
-                <h2>Action</h2>
-                <div class="action movies"></div>
-            </section>           
-            <section class="family-movies">
-                <h2>Family</h2>
-                <div class="family movies"></div>
-            </section>    
-            <section class="documentary-movies">
-                <h2>Documentary</h2>
-                <div class="documentary movies"></div>
-            </section>        
-            <section class="animation-movies">
-                <h2>Animation</h2>
-                <div class="animation movies"></div>
-            </section>                   
-            <section class="drama-movies">
-                <h2>Drama</h2>
-                <div class="drama movies"></div>
-            </section>
-            <section class="comedy-movies">
-                <h2>Comedy</h2>
-                <div class="comedy movies"></div>
-            </section>           
-            <dialog class="movieModal"></dialog>
+        <div class="boxlimmit mResults">
+            <h2 id="results-txt"></h2>
+            <section class="results"></section>
         </div>
+        <dialog class="movieModal"></dialog>
+
     </main>
     <footer>
         <div class="boxlimmit findex">
@@ -108,8 +83,6 @@
                 <a href="#" id="terms">Terms of service</a>
                 <p id="currentYear"></p>
             </span>
-
-            
         </div>
     </footer>
 </body>

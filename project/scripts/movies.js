@@ -27,7 +27,6 @@ async function getMovies(html) {
             })
         }
         movieCard(allMovie, html)
-        console.log(allMovie)
     } catch (error) {
         console.log(error);
     }
@@ -48,14 +47,6 @@ async function movieByGenere(genre, html) {
         console.log(error)
     }
 }
-
-getMovies(topSec);
-movieByGenere(28, actionSec)
-movieByGenere(12, dramaSec)
-movieByGenere(16, animationSec)
-movieByGenere(35, comedySec)
-movieByGenere(99, documentarySec)
-movieByGenere(10751, familySec)
 
 function movieCard(list, html) {
     html.innerHTML = ``;
@@ -91,13 +82,22 @@ async function getProviders(id) {
     }
 }
 
+if(topSec){
+    getMovies(topSec);
+    movieByGenere(28, actionSec)
+    movieByGenere(12, dramaSec)
+    movieByGenere(16, animationSec)
+    movieByGenere(35, comedySec)
+    movieByGenere(99, documentarySec)
+    movieByGenere(10751, familySec)
+}
+
 // Modal Box ####################################################################################
 
 const modal = document.querySelector(".movieModal")
 
 async function movieModal(movie){
     const providers = await getProviders(movie.id) || []
-    console.log(providers)
     modal.innerHTML = ``
     modal.innerHTML = `
     <div id="mvDiv">
@@ -126,15 +126,57 @@ async function movieModal(movie){
     })
 }
 
-// banner #######################################################################################
-const banner = document.querySelector(".banner")
+// search btn #######################################################################################
 
-function bannerIMG(){
-    let banner_list = [
-        "/tmU7GeKVybMWFButWEGl2M4GeiP.jpg",
-        "/vxJ08SvwomfKbpboCWynC3uqUg4.jpg",
-        "/gwj4R8Uy1GwejKqfofREKI9Jh7L.jpg",
-        "/zfbjgQE1uSd9wiPTX4VzsLi0rGG.jpg"
-    ]
 
+const searchInput = document.querySelector("#search");
+const submit_btn = document.querySelector("#submit-search");
+
+const results = document.querySelector(".results")
+const txt = document.querySelector("#results-txt")
+
+
+async function getSearch() {
+    try {
+        const value = getURL()
+        const response = await fetch(`https://api.themoviedb.org/3/search/movie?query=${value}`,options);
+        const rjson = await response.json();
+
+        txt.innerHTML = `Show results for '${getURL()}'`
+
+        const movies = await rjson.results
+
+        if(movies.length > 0){
+            movieCard(movies,results)
+        }else{
+            txt.innerHTML = `No results for '${getURL()}', please search other movie`
+        }
+
+    } catch (error) {
+        console.error(error);
+    }
 }
+
+function searchMovie() {
+    const searchValue = searchInput.value;
+    if (searchValue) {
+        window.location.href = `results.html?query=${encodeURIComponent(searchValue)}`;
+    }
+}
+
+function getURL() {
+    const currentURL = window.location.href;
+    const url = currentURL.split("?")[1];
+    const name = url.split("=")[1];
+    return name;
+}
+
+
+if(results){
+    getSearch()
+}    
+
+submit_btn.addEventListener("click", (event) => {
+    event.preventDefault();
+    searchMovie()
+});  

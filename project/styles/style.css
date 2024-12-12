@@ -105,6 +105,39 @@ nav a:hover{
     transform: translate(-50%, -50%);
 }
 
+/* search ############################################################## */
+#search-form input[type="text"] {
+    width: 20rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 2rem;
+    width: 500px;
+}
+  
+#search-form  input[type="submit"] {
+    border-radius: 3rem;
+    border: none;
+    padding: 1rem;
+    width: 150px;
+}
+  
+#search-form{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-top: 1rem;
+    border: 1px solid black;
+    border-radius: 2rem;
+    background-color: white;
+    padding: 0 0 0 .5rem;
+}
+
+#search-form input[type="text"]:focus,
+#search-form input[type="text"]:focus-visible{
+    outline: none;
+}
+
+
 /* movie section #########################################################################*/
 
 .boxlimmit section{
@@ -253,6 +286,21 @@ dialog span {
     opacity: .7;
 }
 
+.faq{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: 2rem;
+}
+
+.faq h3{
+    color: var(--counter-Color);
+}
+
+.faq p{
+    margin: 0 0 1rem 1rem;
+}
+
 #contact-form{
     display: flex;
     max-width: 700px;
@@ -291,6 +339,19 @@ input[type="submit"]:hover{
     height: 50vh;
     margin: 2rem 2rem;
 }
+
+/* Results ############################################################################# */
+.mResults{
+    margin-top: 1rem;
+    margin: 1rem auto;
+}
+.results{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
 /* footer ############################################################################# */
 
 .media-logo{
@@ -413,11 +474,16 @@ input[type="submit"]:hover{
     /* contacts ###################################################### */
     .mContacts{
         display: grid;
-        grid-template-columns: 250px 450px;
-        justify-content: center;
+        grid-template-columns: 1fr 450px;
+        justify-content: start;
+        gap: 3rem;
     }
 
     .contacts{
+        grid-column: 1;
+    }
+
+    .faq{
         grid-column: 1;
     }
     
