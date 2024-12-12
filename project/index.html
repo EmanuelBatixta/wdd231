@@ -11,7 +11,7 @@
     <!-- extern links -->
     <link rel="stylesheet" href="styles/style.css" media="all">
     <script src="scripts/script.js" defer></script>
-    <script src="scripts/movies.js" defer type="module"></script>
+    <script src="scripts/movies.js" defer></script>
     
     <!--Social media informaçoes-->
     <meta property="og:title" content="Bazinga Movies">
@@ -50,8 +50,10 @@
                 <h1>You're Welcome,</h1>
                 <p>Here you can find any movie that you want</p>
                 <form action="results.html" id="search-form">   
-                    <input type="text" placeholder="Search..." id="search">
-                    <input type="submit" id="submit-search" value="Search">
+                    <label for="text">
+                        <input type="text" placeholder="Search..." id="search">
+                        <input type="submit" id="submit-search" value="Search">
+                    </label>
                 </form>
             </div>
         </section>
@@ -91,7 +93,7 @@
         <div class="boxlimmit findex">
             <div class="enterprise-logo">
                 <img src="images/bazinga-logo.webp" alt="Bazinga movies logo" loading="lazy" width="100">
-                <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg" alt="Bazinga movies logo" loading="lazy" width="100">
+                <a href="https://www.themoviedb.org/" target="_blank"><img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg" alt="Bazinga movies logo" loading="lazy" width="100"></a>
             </div>
             <div class="links">
                 <a href="#" target="_blank" rel="noopener noreferrer">Home</a>

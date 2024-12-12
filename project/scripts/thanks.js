@@ -11,6 +11,9 @@ function show(cup){
     info.forEach(element => {
         if(element.startsWith(cup)){
             i = element.split("=")[1]
+            if(cup === "name"){
+               i = i.charAt(0).toUpperCase() + i.slice(1)
+            }
         }
     });
     return i

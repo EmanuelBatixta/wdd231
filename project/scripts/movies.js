@@ -101,7 +101,7 @@ async function movieModal(movie){
     modal.innerHTML = ``
     modal.innerHTML = `
     <div id="mvDiv">
-        <img src="https://image.tmdb.org/t/p/w500${movie.backdrop_path}" alt="${movie.title} loading="lazy" width="300" class="movie-banner">
+        <img src="https://image.tmdb.org/t/p/w500${movie.backdrop_path}" alt="${movie.title}" loading="lazy" width="300" class="movie-banner">
         <div id="mvInf">
             <span><h3>${movie.title}</h3><p id="relased"> (${movie.release_date.split("-")[0]})</p></span>
             <span id="rate">Rate: ${movie.vote_average.toFixed(1)}</span>
@@ -167,7 +167,8 @@ function searchMovie() {
 function getURL() {
     const currentURL = window.location.href;
     const url = currentURL.split("?")[1];
-    const name = url.split("=")[1];
+    let name = url.split("=")[1];
+    name = name.charAt(0).toUpperCase() + name.slice(1)
     return name;
 }
 

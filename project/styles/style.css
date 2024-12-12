@@ -49,13 +49,6 @@ nav a:hover{
     background: var(--lColor);
 }
 
-/* search ################################################################################ */
-#search{
-    padding: .5rem;
-    border-radius: 1rem;
-    border: none;
-}
-
 /* hamburguer button ##################################################################### */
 .hamburguer{
     position: absolute;
@@ -105,6 +98,52 @@ nav a:hover{
     transform: translate(-50%, -50%);
 }
 
+/* about ##################################################### */
+
+.about{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.about-topics{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.about-topics p {
+    margin: 0 0 0 1rem;
+}
+
+.about-topics h3{
+    color: var(--counter-Color);
+    border-bottom: 1px solid ;
+}
+
+.about strong{
+    color: white;
+}
+
+.team{
+    margin-top: 2rem;
+}
+
+.person{
+    margin-top: 1rem;
+    text-align: center;
+    gap: .5rem;
+}
+.title{
+    font-weight: 200;
+    opacity: .5;
+}
+
+.person img{
+    border-radius: 100%;
+}
+
 /* search ############################################################## */
 #search-form input[type="text"] {
     width: 20rem;
@@ -121,7 +160,7 @@ nav a:hover{
     width: 150px;
 }
   
-#search-form{
+#search-form label{
     display: flex;
     justify-content: space-between;
     align-items:center;
@@ -130,6 +169,7 @@ nav a:hover{
     border-radius: 2rem;
     background-color: white;
     padding: 0 0 0 .5rem;
+    width: 100%;
 }
 
 #search-form input[type="text"]:focus,
@@ -386,6 +426,7 @@ input[type="submit"]:hover{
     text-decoration: none;
     color: var(--higColor);
     font-weight: 300;
+    color: var(--fColor);
 }
 
 .lgpd a:hover{
@@ -396,6 +437,10 @@ input[type="submit"]:hover{
     margin: 2rem 0;
     display: flex;
     gap: 1rem;
+}
+
+.links a:hover{
+    color: var(--counter-Color);
 }
 
 
