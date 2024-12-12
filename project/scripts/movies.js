@@ -128,13 +128,10 @@ async function movieModal(movie){
 
 // search btn #######################################################################################
 
-
 const searchInput = document.querySelector("#search");
 const submit_btn = document.querySelector("#submit-search");
-
 const results = document.querySelector(".results")
 const txt = document.querySelector("#results-txt")
-
 
 async function getSearch() {
     try {
@@ -168,10 +165,10 @@ function getURL() {
     const currentURL = window.location.href;
     const url = currentURL.split("?")[1];
     let name = url.split("=")[1];
+    name = name.replaceAll("%20"," ")
     name = name.charAt(0).toUpperCase() + name.slice(1)
     return name;
 }
-
 
 if(results){
     getSearch()
