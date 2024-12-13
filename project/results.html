@@ -11,7 +11,7 @@
     <!-- extern links -->
     <link rel="stylesheet" href="styles/style.css" media="all">
     <script src="scripts/script.js" defer></script>
-    <script src="scripts/movies.js" defer type="module"></script>
+    <script src="scripts/movies.js" type="module"></script>
     
     <!--Social media informaçoes-->
     <meta property="og:title" content="Bazinga Movies">
@@ -50,10 +50,10 @@
                 <h1 id="welcome-msg">You're Welcome,</h1>
                 <p id="intro-msg">Here you can find any movie that you want</p>
                 <form action="results.html" id="search-form">   
-                    <label for="text">
+                    <div>
                         <input type="text" placeholder="Search..." id="search">
                         <input type="submit" id="submit-search" value="Search">
-                    </label>
+                    </div>
                 </form>
             </div>
         </section>
@@ -80,11 +80,11 @@
                 <a href="https://instagram.com" target="_blank"><img src="images/instagram-logo.svg" alt="instagram-logo" loading="lazy"></a>
                 <a href="https://x.com" target="_blank"><img src="images/twitter-logo.svg" alt="x-logo" loading="lazy"></a>
             </div>
-            <span class="lgpd">
+            <div class="lgpd">
                 <a href="#" id="privacy">Privacy Policy</a>
                 <a href="#" id="terms">Terms of service</a>
                 <p id="currentYear"></p>
-            </span>
+            </div>
 
             
         </div>

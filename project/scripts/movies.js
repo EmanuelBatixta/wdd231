@@ -1,5 +1,4 @@
 import { getURL } from "./using-module.mjs";
-import { movieCard } from "./using-module.mjs";
 import { searchMovie } from "./using-module.mjs";
 
 const options = {
@@ -52,6 +51,21 @@ async function movieByGenere(genre, html) {
     }
 }
 
+function movieCard(list, html) {
+    html.innerHTML = ``;
+    list.forEach((movie) => {
+        const movieElement = document.createElement("div");
+        movieElement.classList.add("movie");
+        movieElement.innerHTML = ` 
+        <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" loading="lazy" width="150">
+        `;
+        html.appendChild(movieElement);
+
+        movieElement.addEventListener("click", ()=>{
+            movieModal(movie)
+        })
+    });
+}
 
 async function getProviders(id) {
     try{
@@ -117,7 +131,6 @@ async function movieModal(movie){
 
 // search btn #######################################################################################
 
-const searchInput = document.querySelector("#search");
 const submit_btn = document.querySelector("#submit-search");
 const results = document.querySelector(".results")
 const txt = document.querySelector("#results-txt")

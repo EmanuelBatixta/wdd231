@@ -98,55 +98,9 @@ nav a:hover{
     transform: translate(-50%, -50%);
 }
 
-/* about ##################################################### */
-
-.about{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 2.5rem;
-}
-
-.about-topics{
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-}
-
-.about-topics p {
-    margin: 0 0 0 1rem;
-}
-
-.about-topics h3{
-    color: var(--counter-Color);
-    border-bottom: 1px solid ;
-}
-
-.about strong{
-    color: white;
-}
-
-.team{
-    margin-top: 2rem;
-}
-
-.person{
-    margin-top: 1rem;
-    text-align: center;
-    gap: .5rem;
-}
-.title{
-    font-weight: 200;
-    opacity: .5;
-}
-
-.person img{
-    border-radius: 100%;
-}
-
 /* search ############################################################## */
 #search-form input[type="text"] {
-    width: 20rem;
+    width: 70%;
     padding: 1rem;
     border: none;
     border-radius: 2rem;
@@ -160,7 +114,7 @@ nav a:hover{
     width: 150px;
 }
   
-#search-form label{
+#search-form div{
     display: flex;
     justify-content: space-between;
     align-items:center;
@@ -211,7 +165,7 @@ nav a:hover{
 .movie{
     font-weight: 200;
     text-align: start;
-    transition: all .1s ease;
+    transition: all .3s ease;
 }
 
 .movie img{
@@ -301,6 +255,54 @@ dialog span {
     color: var(--higColor);
     font-weight: 200;
 }
+
+
+/* about ##################################################### */
+
+.about{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.about-topics{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.about-topics p {
+    margin: 0 0 0 1rem;
+}
+
+.about-topics h3{
+    color: var(--counter-Color);
+    border-bottom: 1px solid ;
+}
+
+.about strong{
+    color: white;
+}
+
+.team{
+    margin-top: 2rem;
+}
+
+.person{
+    margin-top: 1rem;
+    text-align: center;
+    gap: .5rem;
+}
+.title{
+    font-weight: 200;
+    opacity: .5;
+}
+
+.person img{
+    border-radius: 100%;
+}
+
 
 /* contacts ############################################################################### */
 .mContacts{
@@ -402,6 +404,7 @@ input[type="submit"]:hover{
 
 .media-logo img{
     width: 50px;
+    transition: all .3s ease;
 }
 
 .media-logo img:hover{
@@ -427,6 +430,7 @@ input[type="submit"]:hover{
     color: var(--higColor);
     font-weight: 300;
     color: var(--fColor);
+    transition: all .2s ease;
 }
 
 .lgpd a:hover{
@@ -483,8 +487,8 @@ input[type="submit"]:hover{
 
     .findex{
         display: grid;
-        grid-row: 1fr 1.5rem;
-        grid-column: repeat(1fr, 3);
+        grid-template-rows: 1fr 4rem;
+        grid-template-columns: 1fr 1fr 1fr;
         justify-items: center;
         align-items: center;
     }
@@ -492,19 +496,16 @@ input[type="submit"]:hover{
     .enterprise-logo{
         grid-row: 1;
         grid-column: 1;
-        grid-area: "logo";
     }
 
     .media-logo{
         grid-row: 1;
         grid-column: 3;
-        grid-area: "media";
     }
 
     .links{
         grid-row: 1;
         grid-column: 2;
-        grid-area: "links";
         justify-content: space-around;
     }
 

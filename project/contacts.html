@@ -66,13 +66,13 @@
                     <p>If you find an error in the movie information, please contact us through the contact section or send an email to contact@bazinga.com</p>
                     <h3>6. Can I suggest new movies to add to the site?</h3>
                     <p>All information and movies are automatically pulled from TMDB. If you want to suggest new content, the best way is to add the data directly on TMDB, which will then be reflected on our site.</p>
-                   
+                </div>
             </section>
             <form action="thanks.html" method="get" id="contact-form">
                 <h2>Let us know, what we can be better</h2>
-                <label for="name"> *Name: <input type="text" name="name" id="name" required></label>
-                <label for="mail"> *Email: <input type="email" name="mail" id="mail" required></label>
-                <label for="phone"> *Phone: <input type="tel" name="phone" id="phone" required></label>
+                <label for="name"> *Name: <input type="text" name="name" id="name" required autocomplete="name"></label>
+                <label for="mail"> *Email: <input type="email" name="mail" id="mail" required autocomplete="email"></label>
+                <label for="phone"> *Phone: <input type="tel" name="phone" id="phone" required autocomplete="tel"></label>
                 <label for="textarea">*Your feedback:<textarea name="textarea" id="textarea" cols="40" rows="5" required></textarea></label>
                 <input type="submit" value="Send feedback">
             </form>
@@ -94,11 +94,11 @@
                 <a href="https://instagram.com" target="_blank"><img src="images/instagram-logo.svg" alt="instagram-logo" loading="lazy"></a>
                 <a href="https://x.com" target="_blank"><img src="images/twitter-logo.svg" alt="x-logo" loading="lazy"></a>
             </div>
-            <span class="lgpd">
+            <div class="lgpd">
                 <a href="#" id="privacy">Privacy Policy</a>
                 <a href="#" id="terms">Terms of service</a>
                 <p id="currentYear"></p>
-            </span>
+            </div>
 
             
         </div>
