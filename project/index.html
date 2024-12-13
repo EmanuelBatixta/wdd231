@@ -11,7 +11,7 @@
     <!-- extern links -->
     <link rel="stylesheet" href="styles/style.css" media="all">
     <script src="scripts/script.js" defer></script>
-    <script src="scripts/movies.js" defer></script>
+    <script src="scripts/movies.js" defer type="module"></script>
     
     <!--Social media informaçoes-->
     <meta property="og:title" content="Bazinga Movies">
@@ -47,10 +47,10 @@
     <main>
         <section class="banner">
             <div class="boxlimmit banner-content">
-                <h1>You're Welcome,</h1>
-                <p>Here you can find any movie that you want</p>
+                <h1 id="welcome-msg">You're Welcome,</h1>
+                <p id="intro-msg">Here you can find any movie that you want</p>
                 <form action="results.html" id="search-form">   
-                    <label for="text">
+                    <label for="search">
                         <input type="text" placeholder="Search..." id="search">
                         <input type="submit" id="submit-search" value="Search">
                     </label>
