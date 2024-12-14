@@ -141,7 +141,7 @@ async function getSearch() {
         const response = await fetch(`https://api.themoviedb.org/3/search/movie?query=${value}`,options);
         const rjson = await response.json();
 
-        txt.innerHTML = `Show results for '${getURL()}'`
+        txt.innerHTML = `Showing results for '${getURL()}'`
 
         const movies = await rjson.results
 
