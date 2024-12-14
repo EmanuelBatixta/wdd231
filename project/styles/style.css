@@ -85,7 +85,7 @@ nav a:hover{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("https://images.pexels.com/photos/6633/car-superhero-symbol-batman.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-image: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("https://raw.githubusercontent.com/EmanuelBatixta/wdd231/refs/heads/main/project/images/hero-img.webp");
     position: relative;
 }
 
