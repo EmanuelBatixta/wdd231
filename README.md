@@ -39,7 +39,7 @@ To clone and explore this repository, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/wdd231.git
+   git clone https://github.com/EmanuelBatixta/wdd231.git
 
 
 To see my website running:
