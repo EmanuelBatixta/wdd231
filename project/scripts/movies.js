@@ -115,7 +115,7 @@ async function movieModal(movie){
         <button id="closeModal">❌</button>
     </div>
     `
-
+    
     if (providers.length > 0){
         document.querySelector("#providers").innerHTML = providers.map(provider => `<img src="https://image.tmdb.org/t/p/w500${provider.logo_path}" alt="${provider.provider_name}" title="${provider.provider_name}" width="50" loading="lazy">`).join(" ")
     }else{
